@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "04931da4-e5a4-46f5-9a12-5112a7d328b0",
+		"name": "ProjetoEstacionamento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cria estacionamento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estacionamento/salvar?qtdvagas=10&nomeEstacionamento=Estacionamento Barra&endereco=Barra da Lagoa&telefoneEstacionamento=96270909",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacionamento",
+						"salvar"
+					],
+					"query": [
+						{
+							"key": "qtdvagas",
+							"value": "10"
+						},
+						{
+							"key": "nomeEstacionamento",
+							"value": "Estacionamento Barra"
+						},
+						{
+							"key": "endereco",
+							"value": "Barra da Lagoa"
+						},
+						{
+							"key": "telefoneEstacionamento",
+							"value": "96270909"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro e registra entrada",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/gerenciamento/registrarentrada?cpf=06772563964&email=tsearaba@everis.com&nome=Thiago Barcelos&telefone=96270909&placa=OKG2259&cor=preto&modelo=Sandero&idEstacionamento=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gerenciamento",
+						"registrarentrada"
+					],
+					"query": [
+						{
+							"key": "cpf",
+							"value": "06772563964"
+						},
+						{
+							"key": "email",
+							"value": "tsearaba@everis.com"
+						},
+						{
+							"key": "nome",
+							"value": "Thiago Barcelos"
+						},
+						{
+							"key": "telefone",
+							"value": "96270909"
+						},
+						{
+							"key": "placa",
+							"value": "OKG2259"
+						},
+						{
+							"key": "cor",
+							"value": "preto"
+						},
+						{
+							"key": "modelo",
+							"value": "Sandero"
+						},
+						{
+							"key": "idEstacionamento",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos estacionamentos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estacionamento/buscartodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacionamento",
+						"buscartodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar estacionamento por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estacionamento/buscarporid?id=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacionamento",
+						"buscarporid"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar quantidade de vagas disponiveis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/estacionamento/buscarvagasdisponiveis?id=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estacionamento",
+						"buscarvagasdisponiveis"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar saida",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/gerenciamento/registrarsaida?id=9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gerenciamento",
+						"registrarsaida"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cliente/buscartodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"buscartodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar veiculos do cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cliente/veiculoscliente?cpf=06772563964",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"veiculoscliente"
+					],
+					"query": [
+						{
+							"key": "cpf",
+							"value": "06772563964"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos veiculos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/veiculo/buscartodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"veiculo",
+						"buscartodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todas as vagas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/vaga/buscartodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vaga",
+						"buscartodos"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
