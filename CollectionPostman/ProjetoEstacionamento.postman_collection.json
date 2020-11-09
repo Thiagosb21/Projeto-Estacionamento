@@ -49,7 +49,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/gerenciamento/registrarentrada?cpf=06772563964&email=tsearaba@everis.com&nome=Thiago Barcelos&telefone=96270909&placa=OKG2259&cor=preto&modelo=Sandero&idEstacionamento=8",
+					"raw": "http://localhost:8080/gerenciamento/registrarentrada?cpf=06772563964&email=tsearaba@everis.com&nome=Thiago Barcelos&telefone=96270909&placa=OKG2259&cor=preto&modelo=Sandero&idEstacionamento=9",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -90,7 +90,7 @@
 						},
 						{
 							"key": "idEstacionamento",
-							"value": "8"
+							"value": "9"
 						}
 					]
 				}
@@ -149,7 +149,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/estacionamento/buscarvagasdisponiveis?id=8",
+					"raw": "http://localhost:8080/estacionamento/buscarvagasdisponiveis?id=9",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -158,32 +158,6 @@
 					"path": [
 						"estacionamento",
 						"buscarvagasdisponiveis"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": "8"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Registrar saida",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/gerenciamento/registrarsaida?id=9",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"gerenciamento",
-						"registrarsaida"
 					],
 					"query": [
 						{
@@ -221,7 +195,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/cliente/veiculoscliente?cpf=06772563964",
+					"raw": "http://localhost:8080/cliente/veiculoscliente?idCliente=06772563964",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -233,7 +207,7 @@
 					],
 					"query": [
 						{
-							"key": "cpf",
+							"key": "idCliente",
 							"value": "06772563964"
 						}
 					]
@@ -276,6 +250,32 @@
 					"path": [
 						"vaga",
 						"buscartodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar saida",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/gerenciamento/registrarsaida?id=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"gerenciamento",
+						"registrarsaida"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "10"
+						}
 					]
 				}
 			},

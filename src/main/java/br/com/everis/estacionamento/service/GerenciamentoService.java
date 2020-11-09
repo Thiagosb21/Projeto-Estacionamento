@@ -62,10 +62,11 @@ public class GerenciamentoService {
 		return "Entrada de veiculo registrada com sucesso.";
 	}
 
-	public void registrarSaida(Long id) {
+	public String registrarSaida(Long id) {
 		Vaga vaga = vagaService.buscarVagaId(id);
 		vaga.setSaida(Calendar.getInstance().getTime());
 		vagaService.salvar(vaga);
+		return "Saida registrada";
 	}
 
 }

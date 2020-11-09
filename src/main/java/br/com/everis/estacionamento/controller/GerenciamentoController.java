@@ -20,7 +20,7 @@ public class GerenciamentoController {
 	}
 	
 	@PostMapping("/registrarsaida")
-	public void registrarSaida (Long id) {
-		gerenciamentoService.registrarSaida(id);
+	public String registrarSaida (Long id) {
+		return gerenciamentoService.registrarSaida(id);
 	}
 }
